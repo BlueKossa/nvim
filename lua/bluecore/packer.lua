@@ -4,38 +4,39 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-	-- Packer can manage itself
-	use 'wbthomason/packer.nvim'
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
 
-	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.0',
-		-- or                            , branch = '0.1.x',
-		requires = { {'nvim-lua/plenary.nvim'} }
-	}
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        -- or                            , branch = '0.1.x',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
 
-	use({
-		'rose-pine/neovim',
-		as = 'rose-pine',
-		config = function()
-			vim.cmd('colorscheme rose-pine')
-		end
-	})
 
-	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
-	use('nvim-treesitter/playground')
-	use('theprimeagen/harpoon')
-	use('mbbill/undotree')
-	use('tpope/vim-fugitive')
+    use({
+        'rose-pine/neovim',
+        as = 'rose-pine',
+        config = function()
+            vim.cmd('colorscheme rose-pine')
+        end
+    })
 
 
 
-	use {
-		'VonHeikemen/lsp-zero.nvim',
-		requires = {
-			-- LSP Support
-			{'neovim/nvim-lspconfig'},
-			{'williamboman/mason.nvim'},
-			{'williamboman/mason-lspconfig.nvim'},
+    use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
+    use('nvim-treesitter/playground')
+    use('theprimeagen/harpoon')
+    use('mbbill/undotree')
+    use('tpope/vim-fugitive')
+
+    use {
+        'VonHeikemen/lsp-zero.nvim',
+        requires = {
+            -- LSP Support
+            {'neovim/nvim-lspconfig'},
+            {'williamboman/mason.nvim'},
+            {'williamboman/mason-lspconfig.nvim'},
 
             -- Autocompletion
             {'hrsh7th/nvim-cmp'},
@@ -51,13 +52,21 @@ return require('packer').startup(function(use)
         }
     }
 
-
-    use('christianfosli/wsl-copy')
-
+    use("folke/zen-mode.nvim")
     use("github/copilot.vim")
 
-    use {
-        "windwp/nvim-autopairs",
-        config = function() require("nvim-autopairs").setup {} end
-    }
+    use("christianfosli/wsl-copy")
+
+    use("simrat39/rust-tools.nvim")
+
+    --use("andweeb/presence.nvim")
+    --use("/home/bluekossa/projects/lua/presence.nvim")
+    use("Bluekossa/presence.nvim")
+
+    use("jiangmiao/auto-pairs")
+
+    use("lukas-reineke/indent-blankline.nvim")
+
+    use("p00f/nvim-ts-rainbow")
+
 end)

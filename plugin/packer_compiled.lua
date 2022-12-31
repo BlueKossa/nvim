@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/bluekossa/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["auto-pairs"] = {
+    loaded = true,
+    path = "/home/bluekossa/.local/share/nvim/site/pack/packer/start/auto-pairs",
+    url = "https://github.com/jiangmiao/auto-pairs"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/bluekossa/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -119,6 +124,11 @@ _G.packer_plugins = {
     path = "/home/bluekossa/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
   },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/home/bluekossa/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/bluekossa/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -133,12 +143,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/bluekossa/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
-  },
-  ["nvim-autopairs"] = {
-    config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
-    loaded = true,
-    path = "/home/bluekossa/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
-    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -155,6 +159,11 @@ _G.packer_plugins = {
     path = "/home/bluekossa/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-ts-rainbow"] = {
+    loaded = true,
+    path = "/home/bluekossa/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow",
+    url = "https://github.com/p00f/nvim-ts-rainbow"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/bluekossa/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -170,11 +179,21 @@ _G.packer_plugins = {
     path = "/home/bluekossa/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["presence.nvim"] = {
+    loaded = true,
+    path = "/home/bluekossa/.local/share/nvim/site/pack/packer/start/presence.nvim",
+    url = "https://github.com/Bluekossa/presence.nvim"
+  },
   ["rose-pine"] = {
     config = { "\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0" },
     loaded = true,
     path = "/home/bluekossa/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
+  },
+  ["rust-tools.nvim"] = {
+    loaded = true,
+    path = "/home/bluekossa/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
+    url = "https://github.com/simrat39/rust-tools.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -195,14 +214,15 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/bluekossa/.local/share/nvim/site/pack/packer/start/wsl-copy",
     url = "https://github.com/christianfosli/wsl-copy"
+  },
+  ["zen-mode.nvim"] = {
+    loaded = true,
+    path = "/home/bluekossa/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
+    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
-time([[Config for nvim-autopairs]], false)
 -- Config for: rose-pine
 time([[Config for rose-pine]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")

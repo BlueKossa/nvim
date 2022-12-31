@@ -9,7 +9,6 @@ lsp.ensure_installed({
 	'rust_analyzer',
     'nimls',
 })
-
 local cmp = require("cmp")
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
@@ -37,7 +36,6 @@ lsp.set_preferences({
 
 cmp_mappings['<Tab>'] = nil
 cmp_mappings['<S-Tab>'] = nil
-
 lsp.on_attach(function(client, bufnr)
 	local opts = {buffer = bufnr, remap = false}
 
@@ -45,6 +43,7 @@ lsp.on_attach(function(client, bufnr)
 		vim.cmd.LspStop('eslint')
 		return
 	end
+
 
 	vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 	vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
@@ -57,5 +56,6 @@ lsp.on_attach(function(client, bufnr)
 	vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename, opts)
 	vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
 end)
+
 
 lsp.setup()
