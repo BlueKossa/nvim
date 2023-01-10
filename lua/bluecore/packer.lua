@@ -68,5 +68,22 @@ return require('packer').startup(function(use)
     use("lukas-reineke/indent-blankline.nvim")
 
     use("p00f/nvim-ts-rainbow")
+    use("neovim/nvim-lspconfig")
+
+    -- Clojure
+    use("Olical/conjure")
+    use("tpope/vim-dispatch")
+    use("clojure-vim/vim-jack-in")
+    use("radenling/vim-dispatch-neovim")
+
+    -- Crystal
+    use("vim-crystal/vim-crystal")
+
+    -- Webdev
+    use("alvan/vim-closetag")
+    use('neovim/nvim-lspconfig')
+    use('jose-elias-alvarez/null-ls.nvim')
+    use('MunifTanjim/prettier.nvim')
+    use("mattn/emmet-vim")
 
 end)
