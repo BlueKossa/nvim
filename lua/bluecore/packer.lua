@@ -86,4 +86,8 @@ return require('packer').startup(function(use)
     use('MunifTanjim/prettier.nvim')
     use("mattn/emmet-vim")
 
+    use("BlueKossa/windows-terminal-bg.nvim")
+
+    use("udalov/kotlin-vim")
+
 end)

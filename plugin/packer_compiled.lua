@@ -139,6 +139,11 @@ _G.packer_plugins = {
     path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
+  ["kotlin-vim"] = {
+    loaded = true,
+    path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/kotlin-vim",
+    url = "https://github.com/udalov/kotlin-vim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -254,6 +259,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/vim-jack-in",
     url = "https://github.com/clojure-vim/vim-jack-in"
+  },
+  ["windows-terminal-bg.nvim"] = {
+    loaded = true,
+    path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/windows-terminal-bg.nvim",
+    url = "https://github.com/BlueKossa/windows-terminal-bg.nvim"
   },
   ["wsl-copy"] = {
     loaded = true,
