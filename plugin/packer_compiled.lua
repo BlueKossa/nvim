@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["auto-pairs"] = {
-    loaded = true,
-    path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/auto-pairs",
-    url = "https://github.com/jiangmiao/auto-pairs"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -108,11 +103,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
-  },
-  conjure = {
-    loaded = true,
-    path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/conjure",
-    url = "https://github.com/Olical/conjure"
   },
   ["copilot.vim"] = {
     loaded = true,
@@ -163,6 +153,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
+  ["nvim-autopairs"] = {
+    config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
+    loaded = true,
+    path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -240,25 +236,10 @@ _G.packer_plugins = {
     path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/vim-crystal",
     url = "https://github.com/vim-crystal/vim-crystal"
   },
-  ["vim-dispatch"] = {
-    loaded = true,
-    path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/vim-dispatch",
-    url = "https://github.com/tpope/vim-dispatch"
-  },
-  ["vim-dispatch-neovim"] = {
-    loaded = true,
-    path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/vim-dispatch-neovim",
-    url = "https://github.com/radenling/vim-dispatch-neovim"
-  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
-  },
-  ["vim-jack-in"] = {
-    loaded = true,
-    path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/vim-jack-in",
-    url = "https://github.com/clojure-vim/vim-jack-in"
   },
   ["windows-terminal-bg.nvim"] = {
     loaded = true,
@@ -278,6 +259,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
 -- Config for: rose-pine
 time([[Config for rose-pine]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")

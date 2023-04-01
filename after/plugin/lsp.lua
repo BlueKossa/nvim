@@ -5,7 +5,6 @@ lsp.preset("recommended")
 lsp.ensure_installed({
 	'tsserver',
 	'eslint',
-	'sumneko_lua',
 	'rust_analyzer',
     'nimls',
 })
@@ -22,6 +21,7 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 lsp.setup_nvim_cmp({
 	mapping = cmp_mappings
 })
+
 
 
 lsp.set_preferences({
@@ -60,3 +60,7 @@ end)
 
 
 lsp.setup()
+
+vim.diagnostic.config({
+    virtual_text = true
+})

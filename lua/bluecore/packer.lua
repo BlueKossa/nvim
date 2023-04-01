@@ -63,7 +63,12 @@ return require('packer').startup(function(use)
     --use("/home/bluekossa/projects/lua/presence.nvim")
     use("Bluekossa/presence.nvim")
 
-    use("jiangmiao/auto-pairs")
+    --use("jiangmiao/auto-pairs")
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
+
 
     use("lukas-reineke/indent-blankline.nvim")
 
@@ -71,10 +76,10 @@ return require('packer').startup(function(use)
     use("neovim/nvim-lspconfig")
 
     -- Clojure
-    use("Olical/conjure")
-    use("tpope/vim-dispatch")
-    use("clojure-vim/vim-jack-in")
-    use("radenling/vim-dispatch-neovim")
+    --use("Olical/conjure")
+    --use("tpope/vim-dispatch")
+    --use("clojure-vim/vim-jack-in")
+    --use("radenling/vim-dispatch-neovim")
 
     -- Crystal
     use("vim-crystal/vim-crystal")
