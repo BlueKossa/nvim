@@ -37,3 +37,5 @@ end)
 
 
 vim.keymap.set("n", "<leader><tab>", "<cmd>wincmd w<CR>")
+
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")

@@ -3,7 +3,6 @@ require("presence"):setup({
     enable_line_number = true,
     buttons = false,
     line_number_text = "Line %s/%s",
-    log_level = "debug"
 })
 
 

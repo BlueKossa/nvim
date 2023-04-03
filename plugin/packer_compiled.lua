@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["alacritty-theme.nvim"] = {
+    loaded = true,
+    path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/alacritty-theme.nvim",
+    url = "https://github.com/BlueKossa/alacritty-theme.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/cmp-buffer",

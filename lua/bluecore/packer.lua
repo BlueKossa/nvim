@@ -95,4 +95,6 @@ return require('packer').startup(function(use)
 
     use("udalov/kotlin-vim")
 
+    use("BlueKossa/alacritty-theme.nvim")
+
 end)
