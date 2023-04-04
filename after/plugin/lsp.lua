@@ -6,7 +6,6 @@ lsp.ensure_installed({
 	'tsserver',
 	'eslint',
 	'rust_analyzer',
-    'nimls',
 })
 local cmp = require("cmp")
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
