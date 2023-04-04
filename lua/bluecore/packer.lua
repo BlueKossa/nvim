@@ -96,6 +96,7 @@ return require('packer').startup(function(use)
     use("udalov/kotlin-vim")
 
     use("BlueKossa/alacritty-theme.nvim")
-    --use("~/projects/lua/alacritty-theme.nvim/")
+    use("nvim-tree/nvim-tree.lua")
+    use("nvim-tree/nvim-web-devicons")
 
 end)
