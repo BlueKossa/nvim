@@ -276,7 +276,6 @@ gls.right[i] = {
     DiffRemove = {
         provider = function()
             local count = vcs.diff_remove()
-            print(count)
             if count == nil then
                 count = '0 '
             end
