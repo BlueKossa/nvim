@@ -25,11 +25,9 @@ rt.setup({
 
             if client.name == "eslint" then
                 vim.cmd.LspStop('eslint')
-                print("Stopped eslint")
                 return
             end
 
-            print("Hello")
 
             vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
             vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)

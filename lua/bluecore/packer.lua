@@ -98,5 +98,7 @@ return require('packer').startup(function(use)
     use("BlueKossa/alacritty-theme.nvim")
     use("nvim-tree/nvim-tree.lua")
     use("nvim-tree/nvim-web-devicons")
+    use("glepnir/galaxyline.nvim")
+    use("airblade/vim-gitgutter")
 
 end)
