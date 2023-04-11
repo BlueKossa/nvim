@@ -240,17 +240,17 @@ U.section('short_line_left', {
 	ShortBufferLabel = {
 		condition = U.buffer_not_empty,
 		provider = function()
-			return vim.bo.buftype == 'nofile' and vim.bo.filetype or vim.fn.expand('%:.')
+			return vim.bo.buftype == 'nofile' and vim.bo.filetype or vim.fn.expand('%:.') .. ' '
 		end,
 		highlight = {
-			function() return "black" end,
+			function() return "white" end,
 			function() return colors.normal.dark end,
 			function() return 'bold,italic' end,
 		},
 		separator = separators.right,
 		separator_highlight = {
 			colors.normal.dark,
-			"black",
+            colors.normal.bg
 		},
 	}
 })
