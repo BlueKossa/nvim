@@ -11,8 +11,11 @@ local colors      = theme.modecolors
 local icons       = theme.signs.icons
 local separators  = theme.signs.separators
 
+local icon_clr = nil
+
 local U = require 'bluecore.galaxyline.util'
 local condition = require 'galaxyline.condition'
+local fileinfo = require('galaxyline.provider_fileinfo')
 
 local mode_lookup = {
 	n = colors.normal,
@@ -45,7 +48,7 @@ U.section('left', {
 		provider = function() return separators.right end,
 		highlight = {
 			function() return mode.primary end,
-			function() return condition.check_git_workspace() and mode.secondary or mode.bg end,
+			function() return condition.check_git_workspace() and mode.secondary or colors.normal.bg end,
 		},
 	}
 })
@@ -187,18 +190,17 @@ U.section('right', {
 			return U.buffer_not_empty() and vim.bo.buftype ~= 'terminal'
 		end,
 		provider = function()
-			local ft = vim.bo.filetype
-			if ft == 'typescriptreact' then
-				ft = 'tsx'
-			elseif ft == 'javascriptreact' then
-				ft = 'jsx'
-			end
-			return ' ' .. ft .. ' '
+            local clr = fileinfo.get_file_icon_color()
+            if clr ~= nil then
+                icon_clr = clr
+            end
+            local icon = fileinfo.get_file_icon()
+            if icon == nil then return '' end
+            return icon .. ' '
 		end,
 		highlight = {
-			function() return mode.primary end,
+			function() return icon_clr or mode.primary end,
 			function() return mode.dark end,
-			function() return 'italic' end,
 		},
 	}
 })
