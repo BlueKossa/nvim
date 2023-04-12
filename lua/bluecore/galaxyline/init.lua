@@ -240,14 +240,12 @@ U.section('short_line_left', {
 	ShortBufferLabel = {
 		condition = U.buffer_not_empty,
 		provider = function()
-            if vim.bo.filetype == "NvimTree" then
-                return ' 󰙅 '
-            end
 			return vim.bo.buftype == 'nofile' and vim.bo.filetype .. ' ' or vim.fn.expand('%:.') .. ' '
 		end,
 		highlight = {
 			function() return "white" end,
 			function() return colors.normal.dark end,
+			function() return 'bold,italic' end,
 		},
 		separator = separators.right,
 		separator_highlight = {
