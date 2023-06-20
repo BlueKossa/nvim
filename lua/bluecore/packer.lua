@@ -61,7 +61,8 @@ return require('packer').startup(function(use)
 
     --use("andweeb/presence.nvim")
     --use("/home/bluekossa/projects/lua/presence.nvim")
-    use("Bluekossa/presence.nvim")
+    --use("Bluekossa/presence.nvim")
+    use("/home/bluecore/projects/lua/presence.nvim/")
 
     --use("jiangmiao/auto-pairs")
     use {
@@ -100,5 +101,9 @@ return require('packer').startup(function(use)
     use("nvim-tree/nvim-web-devicons")
     use("glepnir/galaxyline.nvim")
     use("airblade/vim-gitgutter")
+    use("evanleck/vim-svelte")
+
+    -- Wakatime
+    use("wakatime/vim-wakatime")
 
 end)
