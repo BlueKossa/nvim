@@ -33,17 +33,7 @@ lsp.set_preferences({
     }
 })
 
-cmp_mappings['<Tab>'] = nil
-cmp_mappings['<S-Tab>'] = nil
-lsp.on_attach(function(client, bufnr)
-	local opts = {buffer = bufnr, remap = false}
-
-	if client.name == "eslint" then
-		vim.cmd.LspStop('eslint')
-		return
-	end
-
-
+local function set_keymaps()
 	vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 	vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 	vim.keymap.set("n", "<leader>vws", vim.lsp.buf.workspace_symbol, opts)
@@ -54,12 +44,81 @@ lsp.on_attach(function(client, bufnr)
 	vim.keymap.set("n", "<leader>vrr", vim.lsp.buf.references, opts)
 	vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename, opts)
 	vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
-end)
+end
 
+
+cmp_mappings['<Tab>'] = nil
+cmp_mappings['<S-Tab>'] = nil
+lsp.on_attach(function(client, bufnr)
+	local opts = {buffer = bufnr, remap = false}
+
+	if client.name == "eslint" then
+		vim.cmd.LspStop('eslint')
+		return
+	end
+
+    set_keymaps()
+end)
 
 
 lsp.setup()
 
 vim.diagnostic.config({
     virtual_text = true
+})
+
+local lspconfig = require('lspconfig')
+
+local function enable_inlay()
+    vim.lsp.buf.inlay_hint(0, true)
+end
+
+local function disable_inlay()
+    vim.lsp.buf.inlay_hint(0, false)
+end
+
+local group = vim.api.nvim_create_augroup("toggle-lsp-inlay", { clear = true })
+
+local function toggle_inlay_on_insert()
+    -- create an autocommand
+    vim.api.nvim_create_autocmd("InsertEnter", {
+        group = group,
+        callback = disable_inlay,
+    })
+
+    vim.api.nvim_create_autocmd("InsertLeave", {
+        group = group,
+        callback = enable_inlay,
+    })
+end
+    
+
+lspconfig.rust_analyzer.setup({
+    on_attach = function(_, bufnr)
+        set_keymaps()
+        vim.lsp.buf.inlay_hint(bufnr, true)
+        toggle_inlay_on_insert()
+    end,
+    settings = {
+        ["rust-analyzer"] = {
+            cargo = {
+                features = "all",
+            },
+
+            checkOnSave = true,
+
+            check = {
+                command = "clippy",
+                allTargets = true,
+                features = "all",
+                invocationLocation = "workspace",
+                extraArgs = { "--tests" },
+            },
+
+        },
+    },
+})
+
+vim.api.nvim_set_hl(0, "LspInlayHint", {
+    link = "Comment",
 })

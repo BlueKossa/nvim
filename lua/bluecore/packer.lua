@@ -26,6 +26,7 @@ return require('packer').startup(function(use)
 
     use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
     use('nvim-treesitter/playground')
+    use('nvim-treesitter/nvim-treesitter-context')
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
@@ -51,6 +52,7 @@ return require('packer').startup(function(use)
             {'rafamadriz/friendly-snippets'},
         }
     }
+    use("lvimuser/lsp-inlayhints.nvim")
 
     use("folke/zen-mode.nvim")
     use("github/copilot.vim")
@@ -74,7 +76,6 @@ return require('packer').startup(function(use)
     use("lukas-reineke/indent-blankline.nvim")
 
     use("p00f/nvim-ts-rainbow")
-    use("neovim/nvim-lspconfig")
 
     -- Clojure
     --use("Olical/conjure")
@@ -87,7 +88,6 @@ return require('packer').startup(function(use)
 
     -- Webdev
     use("alvan/vim-closetag")
-    use('neovim/nvim-lspconfig')
     use('jose-elias-alvarez/null-ls.nvim')
     use('MunifTanjim/prettier.nvim')
     use("mattn/emmet-vim")
