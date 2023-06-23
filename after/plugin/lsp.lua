@@ -68,26 +68,6 @@ local function set_keymaps()
     vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
 end
 
-cmp_mappings['<Tab>'] = nil
-cmp_mappings['<S-Tab>'] = nil
-lsp.on_attach(function(client, bufnr)
-    local opts = { buffer = bufnr, remap = false }
-
-    if client.name == "eslint" then
-        vim.cmd.LspStop('eslint')
-        return
-    end
-
-    set_keymaps()
-end)
-
-
-lsp.setup()
-
-vim.diagnostic.config({
-    virtual_text = true
-})
-
 local function enable_inlay()
     vim.lsp.buf.inlay_hint(0, true)
 end
@@ -111,8 +91,30 @@ local function toggle_inlay_on_insert()
     })
 end
 
+cmp_mappings['<Tab>'] = nil
+cmp_mappings['<S-Tab>'] = nil
+lsp.on_attach(function(client, bufnr)
+    local opts = { buffer = bufnr, remap = false }
+
+    if client.name == "eslint" then
+        vim.cmd.LspStop('eslint')
+        return
+    end
+    enable_inlay()
+    toggle_inlay_on_insert()
+    set_keymaps()
+end)
+
+
+lsp.setup()
+
+vim.diagnostic.config({
+    virtual_text = true
+})
+
+
 lspconfig.rust_analyzer.setup({
-    on_attach = function(_, bufnr)
+    on_attach = function()
         set_keymaps()
         enable_inlay()
         toggle_inlay_on_insert()
