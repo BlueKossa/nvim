@@ -100,8 +100,6 @@ lsp.on_attach(function(client, bufnr)
         vim.cmd.LspStop('eslint')
         return
     end
-    enable_inlay()
-    toggle_inlay_on_insert()
     set_keymaps()
 end)
 
