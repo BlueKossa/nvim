@@ -69,11 +69,11 @@ local function set_keymaps()
 end
 
 local function enable_inlay()
-    vim.lsp.buf.inlay_hint(0, true)
+    vim.lsp.inlay_hint(0, true)
 end
 
 local function disable_inlay()
-    vim.lsp.buf.inlay_hint(0, false)
+    vim.lsp.inlay_hint(0, false)
 end
 
 local group = vim.api.nvim_create_augroup("toggle-lsp-inlay", { clear = true })
