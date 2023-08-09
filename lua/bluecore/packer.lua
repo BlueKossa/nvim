@@ -95,7 +95,6 @@ return require('packer').startup(function(use)
 
     use("udalov/kotlin-vim")
 
-    use("BlueKossa/alacritty-theme.nvim")
     use("nvim-tree/nvim-tree.lua")
     use("nvim-tree/nvim-web-devicons")
     use("glepnir/galaxyline.nvim")
