@@ -8,4 +8,4 @@ function ColorScheme(color)
 end
 
 
-ColorScheme("carbonfox")
+ColorScheme("moonfly")
