@@ -23,6 +23,7 @@ return require('packer').startup(function(use)
         'rose-pine/neovim',
         as = 'rose-pine',
     })
+    use { "bluz71/vim-moonfly-colors", as = "moonfly" }
 
 
 
@@ -103,5 +104,4 @@ return require('packer').startup(function(use)
 
     -- Wakatime
     use("wakatime/vim-wakatime")
-
 end)
