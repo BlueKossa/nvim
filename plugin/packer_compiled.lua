@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
+  ["darcula-solid.nvim"] = {
+    loaded = true,
+    path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/darcula-solid.nvim",
+    url = "https://github.com/briones-gabriel/darcula-solid.nvim"
+  },
   ["emmet-vim"] = {
     loaded = true,
     path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/emmet-vim",
@@ -118,11 +123,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
-  },
-  ["galaxyline.nvim"] = {
-    loaded = true,
-    path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/galaxyline.nvim",
-    url = "https://github.com/glepnir/galaxyline.nvim"
   },
   harpoon = {
     loaded = true,
@@ -144,6 +144,16 @@ _G.packer_plugins = {
     path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/hoob3rt/lualine.nvim"
+  },
+  ["lush.nvim"] = {
+    loaded = true,
+    path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/lush.nvim",
+    url = "https://github.com/rktjmp/lush.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -153,6 +163,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  material = {
+    loaded = true,
+    path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/material",
+    url = "https://github.com/marko-cerovac/material.nvim"
   },
   moonfly = {
     loaded = true,
