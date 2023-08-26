@@ -28,7 +28,7 @@ M.signs = {
 		dos   = ' ',
 		space = '•',
 		tab   = 'ﬀ ',
-		modified = 'פֿ',
+		modified = '󰙏',
 		readonly = '',
 	},
 	separators = {
