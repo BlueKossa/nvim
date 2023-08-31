@@ -23,7 +23,8 @@ return require('packer').startup(function(use)
         'rose-pine/neovim',
         as = 'rose-pine',
     })
-    use { "bluz71/vim-moonfly-colors", as = "moonfly" }
+    use { "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim" }
+    use { 'marko-cerovac/material.nvim', as = 'material' }
 
 
 
@@ -98,7 +99,8 @@ return require('packer').startup(function(use)
 
     use("nvim-tree/nvim-tree.lua")
     use("nvim-tree/nvim-web-devicons")
-    use("glepnir/galaxyline.nvim")
+    --use("glepnir/galaxyline.nvim")
+    use("hoob3rt/lualine.nvim")
     use("airblade/vim-gitgutter")
     use("evanleck/vim-svelte")
 

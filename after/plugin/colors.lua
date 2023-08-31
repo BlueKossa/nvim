@@ -8,4 +8,5 @@ function ColorScheme(color)
 end
 
 
-ColorScheme("moonfly")
+ColorScheme("material")
+require("material.functions").change_style("deep ocean")
