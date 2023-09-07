@@ -8,5 +8,10 @@ function ColorScheme(color)
 end
 
 
-ColorScheme("material")
+ColorScheme("rose-pine")
 require("material.functions").change_style("deep ocean")
+
+vim.keymap.set("n", "<leader>hg", function()
+    local result = vim.cmd(":Inspect")
+    print(vim.inspect(result))
+end)
