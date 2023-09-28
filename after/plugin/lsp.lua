@@ -33,7 +33,8 @@ lsp.set_preferences({
         info = 'I'
     }
 })
-
+-- Save the last search term
+local search_term = nil
 local function set_keymaps()
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
     vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
@@ -53,14 +54,20 @@ local function set_keymaps()
             apply = true,
         })
     end, opts)
-    vim.keymap.set("n", "<leader>vga", function()
+    vim.keymap.set("n", "<leader>vsca", function()
+        local new_search_term = vim.fn.input("Search code action: ")
+        if new_search_term ~= "" then
+            search_term = new_search_term
+        end
         vim.lsp.buf.code_action({
-            context = {
-                only = {
-                    -- Why is the generate action kind an empty string?
-                    "",
-                }
-            }
+            filter = function(ca)
+                for term in search_term:gmatch("[^%s]+") do
+                    if ca.title:match(term) ~= nil then
+                        return true
+                    end
+                end
+                return false
+            end
         })
     end, opts)
     vim.keymap.set("n", "<leader>vrr", vim.lsp.buf.references, opts)
