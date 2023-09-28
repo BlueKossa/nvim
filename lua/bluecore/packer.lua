@@ -64,7 +64,7 @@ return require('packer').startup(function(use)
 
     --use("andweeb/presence.nvim")
     --use("/home/bluekossa/projects/lua/presence.nvim")
-    use("Bluekossa/presence.nvim")
+    use("$HOME/repos/neovim/presence.nvim")
     --use("/home/bluecore/projects/lua/presence.nvim/")
 
     --use("jiangmiao/auto-pairs")

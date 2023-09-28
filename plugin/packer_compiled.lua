@@ -243,7 +243,7 @@ _G.packer_plugins = {
   ["presence.nvim"] = {
     loaded = true,
     path = "/home/bluecore/.local/share/nvim/site/pack/packer/start/presence.nvim",
-    url = "https://github.com/Bluekossa/presence.nvim"
+    url = "/home/bluecore/repos/neovim/presence.nvim"
   },
   ["prettier.nvim"] = {
     loaded = true,
