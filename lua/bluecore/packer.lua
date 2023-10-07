@@ -37,6 +37,7 @@ return require('packer').startup(function(use)
 
     use {
         'VonHeikemen/lsp-zero.nvim',
+        branch = "v2.x",
         requires = {
             -- LSP Support
             { 'neovim/nvim-lspconfig' },
@@ -62,9 +63,9 @@ return require('packer').startup(function(use)
 
     use("christianfosli/wsl-copy")
 
-    --use("andweeb/presence.nvim")
+    use("BlueKossa/presence.nvim")
     --use("/home/bluekossa/projects/lua/presence.nvim")
-    use("$HOME/repos/neovim/presence.nvim")
+    --use("$HOME/repos/neovim/presence.nvim")
     --use("/home/bluecore/projects/lua/presence.nvim/")
 
     --use("jiangmiao/auto-pairs")

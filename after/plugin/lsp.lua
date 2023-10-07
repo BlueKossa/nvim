@@ -1,13 +1,20 @@
 local lsp = require('lsp-zero')
 local lspconfig = require('lspconfig')
-
+local is_nix = os.getenv("NIX_PATH") ~= nil
 lsp.preset("recommended")
-
-lsp.ensure_installed({
-    'tsserver',
-    'eslint',
-    'rust_analyzer',
-})
+if is_nix then
+    lsp.setup_servers({
+        "lua_ls",
+        "rust_analyzer",
+        "jedi_language_server",
+    })
+else
+    lsp.ensure_installed({
+        'tsserver',
+        'eslint',
+        'rust_analyzer',
+    })
+end
 local cmp = require("cmp")
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings({
