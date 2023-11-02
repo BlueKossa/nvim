@@ -7,11 +7,14 @@ function ColorScheme(color)
 	--vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
-
+vim.o.termguicolors = true
 ColorScheme("rose-pine")
-require("material.functions").change_style("deep ocean")
+--require("material.functions").change_style("deep ocean")
 
 vim.keymap.set("n", "<leader>hg", function()
     local result = vim.cmd(":Inspect")
     print(vim.inspect(result))
 end)
+
+-- Color fixes 
+vim.cmd("highlight GitGutterDelete guibg=none") -- Why? No idea.

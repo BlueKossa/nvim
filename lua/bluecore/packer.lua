@@ -30,7 +30,6 @@ return require('packer').startup(function(use)
 
     use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
     use('nvim-treesitter/playground')
-    use('nvim-treesitter/nvim-treesitter-context')
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
@@ -58,10 +57,9 @@ return require('packer').startup(function(use)
         }
     }
 
-    use("folke/zen-mode.nvim")
     use("github/copilot.vim")
 
-    use("christianfosli/wsl-copy")
+    -- use("christianfosli/wsl-copy")
 
     use("BlueKossa/presence.nvim")
     --use("/home/bluekossa/projects/lua/presence.nvim")
@@ -76,8 +74,6 @@ return require('packer').startup(function(use)
 
 
     use("lukas-reineke/indent-blankline.nvim")
-
-    use("p00f/nvim-ts-rainbow")
 
     -- Clojure
     --use("Olical/conjure")
@@ -94,7 +90,6 @@ return require('packer').startup(function(use)
     use('MunifTanjim/prettier.nvim')
     use("mattn/emmet-vim")
 
-    use("BlueKossa/windows-terminal-bg.nvim")
 
     use("udalov/kotlin-vim")
 
@@ -107,4 +102,11 @@ return require('packer').startup(function(use)
 
     -- Wakatime
     use("wakatime/vim-wakatime")
+
+    -- QML
+    use("peterhoeg/vim-qml")
+    use("artoj/qmake-syntax-vim")
+
+
+    use("folke/which-key.nvim")
 end)

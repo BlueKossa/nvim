@@ -2,11 +2,20 @@ local lsp = require('lsp-zero')
 local lspconfig = require('lspconfig')
 local is_nix = os.getenv("NIX_PATH") ~= nil
 lsp.preset("recommended")
+lspconfig.lua_ls.setup({
+    cmd = { "lua-lsp" },
+    filetypes = { "lua", "balls" },
+})
+
+lspconfig.qmlls.setup{
+    filetypes = { "qml" },
+}
 if is_nix then
     lsp.setup_servers({
         "lua_ls",
         "rust_analyzer",
         "jedi_language_server",
+        "qmlls",
     })
 else
     lsp.ensure_installed({
