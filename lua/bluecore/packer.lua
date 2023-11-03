@@ -97,6 +97,7 @@ return require('packer').startup(function(use)
     use("nvim-tree/nvim-web-devicons")
     --use("glepnir/galaxyline.nvim")
     use("hoob3rt/lualine.nvim")
+    use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
     use("airblade/vim-gitgutter")
     use("evanleck/vim-svelte")
 
