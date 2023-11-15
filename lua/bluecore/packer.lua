@@ -25,6 +25,7 @@ return require('packer').startup(function(use)
     })
     use { "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim" }
     use { 'marko-cerovac/material.nvim', as = 'material' }
+    use { 'rockerBOO/boo-colorscheme-nvim' }
 
 
 
