@@ -111,4 +111,7 @@ return require('packer').startup(function(use)
 
 
     use("folke/which-key.nvim")
+
+    -- Latex
+    use("lervag/vimtex")
 end)

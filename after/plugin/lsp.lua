@@ -16,6 +16,7 @@ if is_nix then
         "rust_analyzer",
         "jedi_language_server",
         "qmlls",
+        "zls",
     })
 else
     lsp.ensure_installed({
